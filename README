@@ -1,0 +1,46 @@
+```mermaid
+flowchart LR
+    subgraph A[合同条款]
+        A1[付款条款<br/>预付款 / 进度款 / 发票 / 支持文件]
+        A2[担保条款<br/>APG / PBG / PCG]
+        A3[扣减与争议条款<br/>withholding / disputed invoice / deductions]
+        A4[暂停与终止<br/>suspension / termination]
+        A5[验收与释放节点<br/>PAC / FAC / Claims Release Letter]
+        A6[保险与合规<br/>Insurance / Audit / HSE]
+    end
+
+    subgraph B[财务判断]
+        B1[回款时点是否延后]
+        B2[银行授信与占资压力]
+        B3[合同资产可回收性]
+        B4[停工成本是否可补偿]
+        B5[保函何时释放]
+        B6[或有负债/赔偿风险]
+    end
+
+    subgraph C[财务结果]
+        C1[经营现金流波动]
+        C2[净营运资金占用]
+        C3[应收/合同资产风险]
+        C4[费用与财务成本增加]
+        C5[风险准备或减值压力]
+    end
+
+    A1 --> B1
+    A2 --> B2
+    A3 --> B1
+    A3 --> B3
+    A4 --> B4
+    A4 --> B3
+    A5 --> B5
+    A5 --> B3
+    A6 --> B6
+
+    B1 --> C1
+    B2 --> C2
+    B3 --> C3
+    B4 --> C1
+    B4 --> C4
+    B5 --> C2
+    B6 --> C4
+    B6 --> C5
