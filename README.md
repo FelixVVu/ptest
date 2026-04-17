@@ -1,4 +1,18 @@
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "Inter, Arial, sans-serif",
+    "primaryColor": "#F8FAFC",
+    "primaryBorderColor": "#CBD5E1",
+    "primaryTextColor": "#0F172A",
+    "secondaryColor": "#EEF2FF",
+    "tertiaryColor": "#FFFFFF",
+    "lineColor": "#64748B",
+    "clusterBkg": "#FAFAF9",
+    "clusterBorder": "#D6D3D1"
+  }
+}}%%
 flowchart LR
     subgraph A[合同条款]
         A1[付款条款<br/>预付款 / 进度款 / 发票 / 支持文件]
@@ -44,4 +58,3 @@ flowchart LR
     B5 --> C2
     B6 --> C4
     B6 --> C5
-
